@@ -1,16 +1,19 @@
 #include <stack>
 #include <string>
+#include <unordered_map>
+
+using namespace std;
 
 class Solution {
 public:
-    bool isValid(std::string s) {
-        std::unordered_map<char, char> close_to_open = {
+    bool isValid(string s) {
+        unordered_map<char, char> close_to_open = {
             {')','('},
             {'}','{'},
             {']','['}
         };
 
-        std::stack<char> chars;
+        stack<char> chars;
 
         for(int i=0; i < s.length(); i++) {
             if (close_to_open.count(s[i])) {

@@ -1,8 +1,14 @@
+#include <string>
+#include <tuple>
+#include <utility>
+
+using namespace std;
+
 class Solution {
 
 public:
 
-    std::pair<int, int> get_palindrome(int l, int r, std::string s) {
+    pair<int, int> get_palindrome(int l, int r, string s) {
         while(l >= 0 and r < s.size() and (s[l] == s[r])) {
             l--;
             r++;
